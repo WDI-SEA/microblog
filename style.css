@@ -1,0 +1,14 @@
+body {
+	font-family: 'Rakkas', cursive;
+	font-size: 50px;
+	color: cyan;
+	letter-spacing: 10px;
+	text-align: center;
+	background-color: black;
+}
+.BackImg {
+	background-image: url("codeBackground.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	/*opacity: 0.5;*/
+}
