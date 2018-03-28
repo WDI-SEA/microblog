@@ -17,8 +17,6 @@ userSubmit.addEventListener("click", (e) => {
 		postsAmount.innerHTML++;
 	}
 	form.reset();
-	console.log(userInputArr);
-	console.log(postsAmount);
 })
 
 userDelete.addEventListener("click", (e) => {
