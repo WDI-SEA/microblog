@@ -37,6 +37,7 @@ li {
    color: #4B5259;
    border-top: 1px solid #4B5259;
    border-bottom: 1px solid #4B5259;
+   position: relative;
 }
 .entry {
    padding: 40px 0;
@@ -51,6 +52,14 @@ li {
    padding: 5px;
 }
 .remove-item {
-   float: right;
+   position: absolute;
+   top: 50%;
+   right: 0%;
    cursor: pointer;
+   padding: 8px 16px 12px 16px;
+   transform: translate(0%, -50%);
+   border-left: 1px solid #DDDDDD;
+}
+.remove-item:hover {
+   background-color: #DDDDDD;
 }
