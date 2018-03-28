@@ -21,16 +21,6 @@ input {
    border-radius: 5px;
    color: #4B5259;
 }
-button {
-   display: block;
-   margin: 0 auto;
-   margin-top: 40px;
-   height: 40px;
-   width: 90px;
-   border-radius: 5px;
-   color: #4B5259;
-   font-size: 20px;
-}
 ul {
    list-style-type: none;
 }
@@ -49,4 +39,14 @@ li {
    padding: 40px 0;
    border-top: 1px solid white;
    border-bottom: 1px solid white;
+}
+.input-button {
+   display: block;
+   margin: 0 auto;
+   margin-top: 40px;
+   height: 40px;
+   width: 90px;
+   border-radius: 5px;
+   color: #4B5259;
+   font-size: 20px;
 }
