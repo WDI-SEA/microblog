@@ -12,6 +12,10 @@ body {
 hr {
 	width: 75%;
 }
+h3 {
+	font-size: 20px;
+	margin-top: -50px;
+}
 .messageBubble {
 	background-color: white;
 	width: 75%;
@@ -27,16 +31,22 @@ hr {
 	display: inline;
 	font-size: 16px;
 }
-#submitButton:hover {
-cursor: pointer;
-background-color: #acf;
-color: black;
+#deleteButton:hover, #submitButton:hover {
+	cursor: pointer;
+	background-color: #acf;
+	color: black;
 }
 #submitButton {
 	background-color: cyan;
+}
+#deleteButton {
+	background-color: red;
+}
+.buttons {
 	border-radius: 5px;
 	border: none;
 	color: white;
+}
 }
 #inputMessage {
 }
