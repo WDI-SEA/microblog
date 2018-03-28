@@ -8,7 +8,7 @@ const updateEntries = function(e) {
    entriesArr.unshift(latestEntryText);
    
    let newListEntry = document.createElement('li');
-   newListEntry.innerHTML = entriesArr[0];
+   newListEntry.innerHTML = entriesArr[0] + "<span class='remove-item'>x</span>";
    
    let list = document.getElementById('entry-list');
    list.insertBefore(newListEntry,list.childNodes[0]);
