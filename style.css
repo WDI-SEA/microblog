@@ -11,6 +11,9 @@ h1 {
 	font-size: 100px;
 
 }
+ul {
+	list-style-type: none;
+}
 #post {
 	/*margin-top: -95px;*/
 	background: pink;
