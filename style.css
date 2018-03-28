@@ -55,8 +55,9 @@ hr {
 	padding: 10px 15px 10px 15px;
 	border-radius: 10px;
 	font-size: 20px;
+	background: #914d72;
 }
-.list {
+#list {
 	width: 65%;
 	background: white;
 	opacity: .7;
@@ -67,6 +68,8 @@ hr {
 	right: -255px;
 	top: 200px;
 	border: 2px solid black;
+	font-family: 'Zeyada', cursive;
+	font-size: 25px;
 
 }
 ul {
