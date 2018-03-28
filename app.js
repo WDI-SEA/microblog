@@ -1,8 +1,6 @@
 console.log("sanity check");
 
-const blogPost = ["Blog One", "Blog two", "Blog Three"]
-
-
+const blogPost = [];
 
 const addPost = function () {
 	let getInput = document.getElementById("type").value;
@@ -11,6 +9,8 @@ const addPost = function () {
 	console.log(newItem);
 	newItem.innerHTML = getInput;
 	document.getElementById("list").appendChild(newItem);
+	blogPost.push(getInput);
+	console.log(blogPost);
 
 }
 
