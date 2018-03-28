@@ -17,12 +17,13 @@ input {
    width: 95%;
    height: 35px;
    font-size: 24px;
-   padding: 7px;
+   padding: 7px 15px;
    border-radius: 5px;
    color: #4B5259;
 }
 ul {
    list-style-type: none;
+   padding: 0;
 }
 li {
    margin: 0 auto;
@@ -30,7 +31,7 @@ li {
    height: 35px;
    font-size: 24px;
    background-color: white;
-   padding: 7px;
+   padding: 7px 15px;
    color: #4B5259;
    border-top: 1px solid #4B5259;
    border-bottom: 1px solid #4B5259;
@@ -41,12 +42,9 @@ li {
    border-bottom: 1px solid white;
 }
 .input-button {
-   display: block;
-   margin: 0 auto;
    margin-top: 40px;
    height: 40px;
    width: 90px;
-   border-radius: 5px;
    color: #4B5259;
-   font-size: 20px;
+   padding: 5px;
 }
