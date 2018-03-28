@@ -1,0 +1,34 @@
+body {
+    background: url("images/heather-day-art-03.jpg")
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#link-entry {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+hr {
+    text-align: center;
+    width: 60%;
+}
+.formClass {
+    text-align: center;
+}
+
+#link {
+    padding: 10px;
+}
