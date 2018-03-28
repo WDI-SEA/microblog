@@ -2,7 +2,6 @@ body {
    background-color: #4B5259;
    width: 50%;
    margin: 0 auto;
-   /*font-family: "Gill Sans MT", "Gill Sans", "Gill Sans Std", Verdana, "Bitstream Vera Sans", sans-serif;*/
    font-family: Verdana, "Bitstream Vera Sans", sans-serif;
    color: #DDDDDD;
 }
@@ -20,16 +19,31 @@ input {
    font-size: 24px;
    padding: 7px;
    border-radius: 5px;
+   color: #4B5259;
 }
 button {
    display: block;
    margin: 0 auto;
-   margin-top: 50px;
+   margin-top: 40px;
    height: 40px;
    width: 90px;
    border-radius: 5px;
    color: #4B5259;
    font-size: 20px;
+}
+ul {
+   list-style-type: none;
+}
+li {
+   margin: 0 auto;
+   width: 95%;
+   height: 35px;
+   font-size: 24px;
+   background-color: white;
+   padding: 7px;
+   color: #4B5259;
+   border-top: 1px solid #4B5259;
+   border-bottom: 1px solid #4B5259;
 }
 .entry {
    padding: 40px 0;
