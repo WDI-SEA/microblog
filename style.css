@@ -20,6 +20,7 @@ input {
    padding: 7px 15px;
    border-radius: 5px;
    color: #4B5259;
+   overflow-wrap: break-word;
 }
 ul {
    list-style-type: none;
@@ -28,7 +29,8 @@ ul {
 li {
    margin: 0 auto;
    width: 95%;
-   height: 35px;
+   min-height: 35px;
+   overflow-wrap: break-word;
    font-size: 24px;
    background-color: white;
    padding: 7px 15px;
