@@ -1,3 +1,18 @@
 td{
 	display:block;
 }
+
+#container{
+	 margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+h1{
+	text-align: center;
+}

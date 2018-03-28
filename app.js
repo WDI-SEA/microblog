@@ -1,6 +1,6 @@
 const blogEntryForm = document.getElementById("blogEntryForm");
 const blogHome = document.getElementById("blogHome");
-const blogArr = ['fake blog post1','fake blog post2'];
+const blogArr = ['here is a test','Fake blog post1','Fake blog post2'];
 
 function popFunc() {
 	for (let x of blogArr){
