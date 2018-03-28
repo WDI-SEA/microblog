@@ -3,9 +3,22 @@
 <head>
   <title>Microblog</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
 <body>
-  <!-- YOUR CODE HERE! -->
+  	<h1>Micro Blog<h1>
+  	<hr>
+	<form id="post-form">
+  		<input id="post-input" type="text" placeholder="What do you have to say?">
+  	</form>
+  		<button id="post" type="submit" form="post-form" value="Submit">Post</button>
+
+  	<div>
+  		<ul id="postedHtml">
+  			<li>dummy1</li>
+  			<li>dummy2</li>
+  		</ul>
+  	</div>
 
   <script src="app.js"></script>
 </body>

@@ -1,0 +1,35 @@
+body {
+	background-image: url("images/backimage.jpg");
+
+}
+h1 {
+	margin: 100px 200px -95px 200px;
+	/*margin: 0 auto;*/
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	color: white;
+	font-size: 100px;
+
+}
+#post {
+	/*margin-top: -95px;*/
+	background: pink;
+	padding: 10px;
+	font-family: 'Lobster', cursive;
+	font-size: 30px;
+	border-radius: 18px;
+	top: -100px;
+	position: relative;
+
+}
+#post-input {
+	width: 500px;
+	height: 30px;
+	border-radius: 18px;
+	font-family: helvetica;
+	font-size: 15px;
+	background: #F7EEE5;
+	top: -70px;
+	position: relative;
+
+}
