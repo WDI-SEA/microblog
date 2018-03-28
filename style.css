@@ -1,0 +1,24 @@
+body {
+	
+	background-image: url("http://eyeflow.com/wp-content/uploads/2014/06/blogpic2.png");
+
+}
+
+h1{
+	color : red;
+	text-align: center;
+}
+
+#obj1 {
+	box-sizing: border-box;
+	width: 50%;
+	padding: 1em;
+	border: 0.15em solid #808080;
+	border-radius: 0.5em;
+	text-align: center;
+	margin-left: 300px;
+}
+#mybtn {
+	margin-left: 700px;
+	color : blue;
+}
