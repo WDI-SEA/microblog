@@ -27,18 +27,19 @@ const updateEntries = function(e) {
    
    let latestEntry = document.getElementsByTagName('input')[0];
    let latestEntryText = latestEntry.value;
-   entriesArr.unshift(latestEntryText);
+   if (latestEntryText !== '') {
+      entriesArr.unshift(latestEntryText);
    
-   let newListEntry = document.createElement('li');
-   newListEntry.setAttribute('id',entriesArr.length-1);
-   newListEntry.innerHTML = entriesArr[0] + "<span class='remove-item'>x</span>";
-   
-   list = document.getElementById('entry-list');
-   list.insertBefore(newListEntry,list.childNodes[0]);
-   document.getElementById('entry-form').reset();
-   
-   setLocalStorage(entriesArr);
-
+      let newListEntry = document.createElement('li');
+      newListEntry.setAttribute('id',entriesArr.length-1);
+      newListEntry.innerHTML = entriesArr[0] + "<span class='remove-item'>x</span>";
+      
+      list = document.getElementById('entry-list');
+      list.insertBefore(newListEntry,list.childNodes[0]);
+      document.getElementById('entry-form').reset();
+      
+      setLocalStorage(entriesArr);
+   };
    listenForEntryDeletions();
 }
 
