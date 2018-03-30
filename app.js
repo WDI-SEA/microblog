@@ -8,10 +8,13 @@ const setLocalStorage = (entriesArr) => {
 }
 
 const deleteEntry = function(e) {
-   console.log("Triggered deletion of entry");
    let clickedCloseButton = this.parentElement;
+   let arrayItemToRemove = this.parentElement.id;
    list.removeChild(clickedCloseButton);
-   console.log("Deleted entry");
+   console.log("Entries array before removal: ",entriesArr);
+   entriesArr.splice(entriesArr.length-arrayItemToRemove-1,1);
+   console.log("Entries array after removal: ",entriesArr);
+   setLocalStorage(entriesArr);
 }
 
 const listenForEntryDeletions = () => {
@@ -29,6 +32,7 @@ const updateEntries = function(e) {
    entriesArr.unshift(latestEntryText);
    
    let newListEntry = document.createElement('li');
+   newListEntry.setAttribute('id',entriesArr.length-1);
    newListEntry.innerHTML = entriesArr[0] + "<span class='remove-item'>x</span>";
    
    list = document.getElementById('entry-list');
@@ -50,6 +54,7 @@ const getLocalStorage = () => {
       
       entriesArr.forEach( (item, index) => {
          let newListEntry = document.createElement('li');
+         newListEntry.setAttribute('id',entriesArr.length-1-index);
          newListEntry.innerHTML = item + "<span class='remove-item'>x</span>";
          list.appendChild(newListEntry);
       });
