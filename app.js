@@ -11,9 +11,7 @@ const deleteEntry = function(e) {
    let clickedCloseButton = this.parentElement;
    let arrayItemToRemove = this.parentElement.id;
    list.removeChild(clickedCloseButton);
-   console.log("Entries array before removal: ",entriesArr);
    entriesArr.splice(entriesArr.length-arrayItemToRemove-1,1);
-   console.log("Entries array after removal: ",entriesArr);
    setLocalStorage(entriesArr);
 }
 
