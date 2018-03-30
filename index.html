@@ -2,10 +2,51 @@
 <html>
 <head>
   <title>Microblog</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
 <body>
-  <!-- YOUR CODE HERE! -->
+  <div class="container">
+  	<h1>Micro Blog</h1>
+  	<hr>
+    
+      <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+	       <form id="post-form">
+  		      <input id="post-input" type="text" placeholder="What do you have to say?">
+           <button id="post" type="submit" form="post-form" value="Submit">Post</button>
+          </form>
+        </div>
+      </div>
+    
+      <div>
+        	<div class="row">
+            <div class="col-md-4">
+              <h3>Recent Posts</h3>
+          		<ul id="postedHtml">
+          			<li>FISH GUY MUST BE STOPPED</li>
+          			<li>Turn up the heat!</li>
+          		</ul>
+            </div>
+            <div class="col-md-4">
+              <h3>Trending Posts</h3>
+              <ul>
+                <li>JavaScript is hard</li>
+                <li>JQuery is harder</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3>Favourite Posts</h3>
+              <ul>
+                <li>Mind blown</li>
+                <li>Brain is turning to goo</li>
+              </ul>
+            </div>
+  	       </div>
+          </div>
+        </div>
 
   <script src="app.js"></script>
 </body>

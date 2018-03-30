@@ -1,0 +1,46 @@
+body {
+	background-image: url("images/backimage.jpg");
+
+}
+h1 {
+
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	color: white;
+	font-size: 100px;
+}
+h3 {
+	font-family: 'Lobster', cursive;
+	border-bottom: 4px dotted pink;
+	margin-top: 20px;
+	color: #f2fc6c;
+	text-align: center;
+}
+ul {
+	list-style-type: none;
+	padding: 0px;
+	color: #f2fc6c;
+	text-align: center;
+}
+li {
+	font-family: 'Lobster', cursive;
+	font-size: 20px;
+}
+#post {
+	background: pink;
+	padding: 10px;
+	font-family: 'Lobster', cursive;
+	font-size: 30px;
+	border-radius: 18px;
+	/*top: -100px;*/
+	/*position: relative;*/
+
+}
+#post-input {
+	width: 300px;
+	height: 30px;
+	border-radius: 18px;
+	font-family: helvetica;
+	font-size: 15px;
+	background: #F7EEE5;
+}
