@@ -4,15 +4,21 @@ var list;
 // let closeButtonsArr = [];
 
 const setLocalStorage = (entriesArr) => {
-   console.log("Setting localStorage with array:",entriesArr);
-   console.log("localStorage - before: ",storedPosts);
    localStorage.setItem('storedPosts', JSON.stringify(entriesArr));
-   console.log("localStorage - after: ",storedPosts);
 }
 
 const deleteEntry = function(e) {
+   console.log("Triggered deletion of entry");
    let clickedCloseButton = this.parentElement;
    list.removeChild(clickedCloseButton);
+   console.log("Deleted entry");
+}
+
+const listenForEntryDeletions = () => {
+   let closeButtonsArr = document.getElementsByClassName('remove-item');
+   for (let i = 0; i < closeButtonsArr.length; i++) {
+      closeButtonsArr[i].addEventListener('click',deleteEntry);
+   }
 }
 
 const updateEntries = function(e) {
@@ -31,10 +37,7 @@ const updateEntries = function(e) {
    
    setLocalStorage(entriesArr);
 
-   let closeButtonsArr = document.getElementsByClassName('remove-item');
-   for (let i = 0; i < closeButtonsArr.length; i++) {
-      closeButtonsArr[i].addEventListener('click',deleteEntry);
-   }
+   listenForEntryDeletions();
 }
 
 const getLocalStorage = () => {
@@ -54,4 +57,5 @@ const getLocalStorage = () => {
 }
 
 getLocalStorage();
+listenForEntryDeletions();
 document.getElementById('submit-button').addEventListener('click',updateEntries);
