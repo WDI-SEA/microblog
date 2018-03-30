@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Microblog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-  <!-- YOUR CODE HERE! -->
 
+<body>
+  <div class="container">
+    <h2 class="ui floated header">Micro Blog</h2>
+    <div class="ui clearing divider"></div>
+
+    <div class="container">
+      <div class="ui form">
+        <div class="field"></div>
+        <input type="text">
+        <button id='post' class="ui primary button">Post</button>
+      </div>
+    </div>
+    <div>
+      <ul id="todoList">
+        <li class="chip">haha <span><i class=""></i></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script src="app.js"></script>
 </body>
+
 </html>

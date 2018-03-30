@@ -1,0 +1,17 @@
+.header {
+    text-align: center;
+}
+
+.chip {
+    padding-right: 40px;
+}
+
+.chip:hover {
+    border: 1px solid black;
+}
+
+.completed {
+    color: grey;
+    text-decoration: line-through;
+}
+
