@@ -1,42 +1,44 @@
 let entriesArr = [];
 let storedPosts;
-var list;
-// let closeButtonsArr = [];
 
 const setLocalStorage = (entriesArr) => {
    localStorage.setItem('storedPosts', JSON.stringify(entriesArr));
 }
 
 const deleteEntry = function(e) {
-   let clickedCloseButton = this.parentElement;
-   let arrayItemToRemove = this.parentElement.id;
-   list.removeChild(clickedCloseButton);
-   entriesArr.splice(entriesArr.length-arrayItemToRemove-1,1);
+   let arrayItemToRemove = $('li').index(this.parentElement);
+   this.parentElement.remove(arrayItemToRemove);
+   entriesArr.splice(arrayItemToRemove,1);
    setLocalStorage(entriesArr);
 }
 
 const listenForEntryDeletions = () => {
-   let closeButtonsArr = document.getElementsByClassName('remove-item');
-   for (let i = 0; i < closeButtonsArr.length; i++) {
-      closeButtonsArr[i].addEventListener('click',deleteEntry);
+   //jQuery-ify the code below
+   let closedButtonsArr = document.getElementsByClassName('remove-item');
+   for (let i = 0; i < closedButtonsArr.length; i++) {
+      closedButtonsArr[i].addEventListener("click",deleteEntry);
    }
 }
 
 const updateEntries = function(e) {
    e.preventDefault();
    
-   let latestEntry = document.getElementsByTagName('input')[0];
-   let latestEntryText = latestEntry.value;
-   if (latestEntryText !== '') {
-      entriesArr.unshift(latestEntryText);
-   
-      let newListEntry = document.createElement('li');
-      newListEntry.setAttribute('id',entriesArr.length-1);
-      newListEntry.innerHTML = entriesArr[0] + "<span class='remove-item'>x</span>";
+   let latestEntry = {};
+   latestEntry.value = $('#entry-text').val();
+
+   if (latestEntry.value !== '') {
+      entriesArr.unshift(latestEntry);
       
-      list = document.getElementById('entry-list');
-      list.insertBefore(newListEntry,list.childNodes[0]);
-      document.getElementById('entry-form').reset();
+      let newBlogItem = document.createElement('li');
+      newBlogItem.innerHTML = latestEntry.value + "<span class='remove-item'>x</span>";
+
+      let blogPostCount = $('#entry-list').children().length;
+      if (blogPostCount === 0) {
+         $('#entry-list').append(newBlogItem);
+      } else {
+         $('#entry-list').prepend(newBlogItem);
+      }
+      $('#entry-text').val('');
       
       setLocalStorage(entriesArr);
    };
@@ -45,21 +47,17 @@ const updateEntries = function(e) {
 
 const getLocalStorage = () => {
    let savedPostsStr = localStorage.getItem('storedPosts');
-   console.log(savedPostsStr);
    if (savedPostsStr !== null) {
       entriesArr = JSON.parse(savedPostsStr);
-
-      list = document.getElementById('entry-list');
       
-      entriesArr.forEach( (item, index) => {
-         let newListEntry = document.createElement('li');
-         newListEntry.setAttribute('id',entriesArr.length-1-index);
-         newListEntry.innerHTML = item + "<span class='remove-item'>x</span>";
-         list.appendChild(newListEntry);
+      entriesArr.forEach( (item) => {
+         let newBlogItem = document.createElement('li');
+         newBlogItem.innerHTML = item.value + "<span class='remove-item'>x</span>";
+         $('#entry-list').append(newBlogItem);
       });
    };
 }
 
 getLocalStorage();
 listenForEntryDeletions();
-document.getElementById('submit-button').addEventListener('click',updateEntries);
+$('#submit-button').click(updateEntries);
