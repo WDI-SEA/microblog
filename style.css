@@ -58,7 +58,7 @@ li {
    cursor: pointer;
    padding: 4px 16px 10px 16px;
    transform: translate(0%, -50%);
-   border-left: 1px solid #DDDDDD;
+   border-left: 1px solid #DDDDDD;;
 }
 .remove-item:hover {
    background-color: #DDDDDD;
