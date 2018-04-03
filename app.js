@@ -26,14 +26,14 @@ const updateEntries = function(e) {
    let newBlogEntry = {};
    newBlogEntry.value = $('#entry-text').val();
 
-   if (newEntry.value !== '') {
+   if (newBlogEntry.value !== '') {
       entriesArr.unshift(newBlogEntry);
       
       let newBlogListItem = document.createElement('li');
       newBlogListItem.innerHTML = newBlogEntry.value + "<span class='remove-item'>x</span>";
 
       let blogPostCount = $('#entry-list').children().length;
-      if (blogPostCount === 0) ? $('#entry-list').append(newBlogListItem) : $('#entry-list').prepend(newBlogListItem);
+      (blogPostCount === 0) ? $('#entry-list').append(newBlogListItem) : $('#entry-list').prepend(newBlogListItem);
       
       $('#entry-text').val('');
       
