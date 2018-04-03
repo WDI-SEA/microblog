@@ -23,21 +23,18 @@ const listenForEntryDeletions = () => {
 const updateEntries = function(e) {
    e.preventDefault();
    
-   let latestEntry = {};
-   latestEntry.value = $('#entry-text').val();
+   let newBlogEntry = {};
+   newBlogEntry.value = $('#entry-text').val();
 
-   if (latestEntry.value !== '') {
-      entriesArr.unshift(latestEntry);
+   if (newEntry.value !== '') {
+      entriesArr.unshift(newBlogEntry);
       
-      let newBlogItem = document.createElement('li');
-      newBlogItem.innerHTML = latestEntry.value + "<span class='remove-item'>x</span>";
+      let newBlogListItem = document.createElement('li');
+      newBlogListItem.innerHTML = newBlogEntry.value + "<span class='remove-item'>x</span>";
 
       let blogPostCount = $('#entry-list').children().length;
-      if (blogPostCount === 0) {
-         $('#entry-list').append(newBlogItem);
-      } else {
-         $('#entry-list').prepend(newBlogItem);
-      }
+      if (blogPostCount === 0) ? $('#entry-list').append(newBlogListItem) : $('#entry-list').prepend(newBlogListItem);
+      
       $('#entry-text').val('');
       
       setLocalStorage(entriesArr);
@@ -51,9 +48,9 @@ const getLocalStorage = () => {
       entriesArr = JSON.parse(savedPostsStr);
       
       entriesArr.forEach( (item) => {
-         let newBlogItem = document.createElement('li');
-         newBlogItem.innerHTML = item.value + "<span class='remove-item'>x</span>";
-         $('#entry-list').append(newBlogItem);
+         let newBlogListItem = document.createElement('li');
+         newBlogListItem.innerHTML = item.value + "<span class='remove-item'>x</span>";
+         $('#entry-list').append(newBlogListItem);
       });
    };
 }
