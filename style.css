@@ -14,7 +14,7 @@ h1 {
 input {
    display: block;
    margin: 0 auto;
-   width: 95%;
+   width: 93%;
    height: 35px;
    font-size: 24px;
    padding: 7px 15px;
@@ -28,7 +28,7 @@ ul {
 }
 li {
    margin: 0 auto;
-   width: 95%;
+   width: 93%;
    min-height: 35px;
    overflow-wrap: break-word;
    font-size: 24px;
@@ -53,13 +53,16 @@ li {
 }
 .remove-item {
    position: absolute;
-   top: 50%;
-   right: 0%;
+   bottom: 20%;
+   right: 0;
    cursor: pointer;
-   padding: 4px 16px 10px 16px;
-   transform: translate(0%, -50%);
-   border-left: 1px solid #DDDDDD;;
+   /*padding: 4px 16px 10px 16px;*/
+   padding: 0px 16px 0px 16px;
+   vertical-align: middle;
+   /*transform: translate(0%, -50%);*/
+   /*border-left: 1px solid #DDDDDD;;*/
 }
 .remove-item:hover {
-   background-color: #DDDDDD;
+   /*background-color: #DDDDDD;*/
+   color: red;
 }
