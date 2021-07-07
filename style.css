@@ -1,0 +1,57 @@
+body {
+    background: url("images/heather-day-art-03.jpg")
+}
+header {
+    color: white;
+    margin: 50px 0;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Berkshire Swash', cursive;
+    color: white;
+    border-width: 5px;  
+    border-style: dotted;
+    padding: 10px;
+}
+
+#blogEntry {
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    margin: 20px 20px ;
+    border-radius: 12px;
+    padding: 8px 28px;
+    background-color: #FFC740;
+}
+
+main {
+    text-align: center;
+}
+hr {
+    height: 6px;
+    background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+    border: 0;
+    color: white;
+}
+.formClass {
+}
+
+#link {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+ul {
+    color: white;
+    list-style-type: none;
+}
