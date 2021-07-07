@@ -2,11 +2,23 @@
 <html>
 <head>
   <title>Microblog</title>
+  <link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <!-- YOUR CODE HERE! -->
-
+	<main>
+		<h1>My Blog</h1>
+		<h3>Posts: <span id="postsAmount">0</span></h3>
+		<hr>
+		<form id="myForm">
+			<input id="inputMessage" class="userInput" type="text" placeholder="Write here..." size="75">
+			<button id="submitButton" class="buttons userInput" type="submit">Submit</button>
+			<button id="deleteButton" class="buttons userInput" type="submit">Delete All</button>
+		</form>
+		<hr>
+		<ul id="postList">
+		</ul>
+	</main>
   <script src="app.js"></script>
 </body>
 </html>

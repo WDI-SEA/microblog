@@ -1,0 +1,67 @@
+body {
+	margin: 50px;
+	font-family: 'Rakkas', cursive;
+	font-size: 40px;
+	color: white;
+	letter-spacing: 10px;
+	text-align: center;
+	background-image: url("codeBackground.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+hr {
+	width: 75%;
+}
+h3 {
+	font-size: 20px;
+	margin-top: -50px;
+}
+.messageBubble {
+	background-color: white;
+	width: 75%;
+	height: 35px;
+	margin: 0 auto;
+	border-radius: 5px;
+	border-bottom: solid black 1px;
+	font-size: 20px;
+	color: black;
+}
+.userInput {
+	padding: 10px;
+	display: inline;
+	font-size: 16px;
+}
+#deleteButton:hover, #submitButton:hover {
+	cursor: pointer;
+	background-color: #acf;
+	color: black;
+}
+#submitButton {
+	background-color: cyan;
+}
+#deleteButton {
+	background-color: red;
+}
+.buttons {
+	border-radius: 5px;
+	border: none;
+	color: white;
+}
+}
+#inputMessage {
+}
+ul {
+	list-style-type: none;
+}
+.list{
+	width: 100%;
+	display: block;
+	padding: 0;
+}
+
+
+
+
+
+
+
